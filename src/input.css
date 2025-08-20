@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-dark: var(--color-slate-900);
+    --color-primary: var(--color-indigo-500);
+    --color-secondary: var(--color-slate-800);
+    --color-main-text: var(--color-slate-50);
+    --color-secondaryText: var(--color-slate-400);
+    --color-borderColor: var(--color-slate-700);
+}
+
+@layer base {
+    body {
+        font-family: "Inter", sans-serif;
+        color: var(--color-main-text);
+        background-color: var(--color-dark);
+    }
+    h1 {
+        font-weight: var(--font-weight-extrabold);
+        font-size: var(--text-5xl);
+        letter-spacing: var(--tracking-tight);
+    }
+    h2 {
+        font-weight: var(--font-weight-bold);
+        font-size: var(--text-3xl);
+    }
+    h3 {
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--text-xl);
+    }
+    p {
+        font-weight: var(--font-weight-normal);
+        font-size: var(--text-base);
+        letter-spacing: var(--leading-relaxed);
+    }
+    a {
+        font-weight: var(--font-weight-medium);
+        color: var(--color-indigo-400);
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+@layer components {
+    .btnPrimary {
+        background-color: var(--color-indigo-600);
+        color: var(--color-white);
+        font-weight: var(--font-weight-semibold);
+        border-radius: var(--radius-lg);
+        padding:--spacing(3) --spacing(6);
+    }
+    .btnPrimary:hover {
+        background-color: var(--color-indigo-700);
+    }
+
+    .btnSecondary {
+        background-color: var(--color-slate-700);
+        color: var(--color-white);
+        font-weight: var(--font-weight-semibold);
+        border-radius: var(--radius-lg);
+        padding: --spacing(3) --spacing(6);
+    }
+    .btnSecondary:hover {
+        background-color: var(--color-slate-600);
+    }
+
+    .card {
+        background-color: var(--color-slate-800);
+        border-color: var(--color-slate-700);
+        padding: --spacing(8);
+        border-radius: var(--radius-xl);
+    }
+}
